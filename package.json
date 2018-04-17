@@ -1,0 +1,26 @@
+{
+  "name": "mongo-scrpr",
+  "version": "1.0.0",
+  "description": "Flexing my Mongoose and Cheerio muscles to scrape news from another site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecaniser/MonGO-Scrpr.git"
+  },
+  "keywords": [
+    "scraper",
+    "website",
+    "news",
+    "article",
+    "title"
+  ],
+  "author": "Sergio Burca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mecaniser/MonGO-Scrpr/issues"
+  },
+  "homepage": "https://github.com/mecaniser/MonGO-Scrpr#readme"
+}
