@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(process.cwd() + '/public'));
 //Static public folder
 // app.use(express.static("public"));
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 
 
