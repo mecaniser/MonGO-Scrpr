@@ -9,7 +9,7 @@ var app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: false
 }));
 
 app.use(express.static(process.cwd() + '/public'));
