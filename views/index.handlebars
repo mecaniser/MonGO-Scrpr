@@ -1,0 +1,86 @@
+<nav>
+    <div class="nav-wrapper teal darken-4">
+      <a href="/" class="brand-logo center">Scrape It</a>
+      <ul class="right" id="nav-mobile">
+        <li><a href="/scrape">Scrape It</a></li>
+        <li><a href="https://github.com/mecaniser/MonGO-Scrpr" target="_blank">Git Repo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div>
+    <h1 class="card z-depth-5 center-align">Read The most deep Investigations</h1>
+</div>
+
+{{!--  --}}
+  <div class="row">
+    {{!-- Articles --}}
+    <div class ="col offset-s1 s10 offset-m1 m10 offset-l1 l10 ">
+      {{#each article}}
+        <div class="card-panel">
+          <h4>{{this.title}}</h4>
+          {{!-- goes to article.handlebars --}}
+          <a href = "/readArticle/{{this._id}}" class="waves-effect waves-light btn deep-orange darken-4" id="btnSignUp">Find Out more...</a>
+        </div>
+      {{/each}}
+    </div>
+
+{{!--  --}}
+
+    <div class="row">
+      <form action="/notes/{{article._id}}" method="POST" class="card-panel col offset-s1 s10 offset-m1 m10 offset-l1 l10">
+        <h5>Have something to say:</h5>
+          <div class="row">
+            <div class="input-field">
+              <i class="material-icons prefix">face</i>
+              <input id="icon_prefix" type="text" placeholder="Name" name="name" class="validate active">
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">notes</i>
+              <input id="icon_telephone" type="text" placeholder="Notes" name="notes" class="validate active">
+            </div>
+          </div>
+          <!-- Submit Button -->
+          <div class="row">
+            <div class="input-field">
+            <center><input class="btn add-comment-button teal darken-4" type="submit" value="Submit"></center>
+            </div>
+          </div>
+        </form>
+    </div>
+{{!-- notes go here --}}
+    <div class="row"> 
+      <div class="card-panel orange darken-1 col offset-s1 s10 offset-m1 m10 offset-l1 l10 ">
+          <h5>Notes:</h5>
+          {{#if article.notes}}
+            {{#each article.notes}}
+              <div class="card">
+                <p id="nameComment">{{name}}</p>
+                <p>{{body}}<p>
+              </div>
+            {{/each}}
+            {{else}}
+            <p>Empty notes.</p>
+          {{/if}}
+      </div>
+    </div>
+
+  <footer class="page-footer white darken-1">
+    <div class="footer-copyright black">
+        <div class="container col s6 m6 l6 ">
+          All articles belong to: <a class="orange-text btn" href='https://www.aljazeera.com' target="_blank">Aljazeera</a>
+        </div>
+        <div class="col s3 m3 l3 center">
+        <a class="orange-text btn" href="/jason-data">JSON Data</a>
+        </div>
+        <div class="col s3 m3 l3 center">
+        <a class="orange-text btn" href='/clearAll'>Clear All</a>
+        </div>
+    </div>
+</footer>
+{{!-- Level Ground --}}
+
+
+
+
