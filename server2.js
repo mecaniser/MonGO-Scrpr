@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(process.cwd() + '/public'));
 //Static public folder
 // app.use(express.static("public"));
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mecaniserdb";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
@@ -27,9 +28,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 // //connecting to MongoDB
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds247699.mlab.com:47699/heroku_bbsmjm4s');
 
-// mongoose.connect('mongodb://localhost/mecaniserdb');
 
 
 var db = mongoose.connection;

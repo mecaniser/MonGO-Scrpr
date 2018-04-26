@@ -156,9 +156,9 @@ router.post('/notes/:id', function(req, res) {
   };
  
   //using the notes model, create a new note
-  var Notes = new Notes(noteObj);
+  var notes = new notes(noteObj);
 
-  newNotes.save(function(err, doc) {
+  newnotes.save(function(err, doc) {
       if (err) {
           console.log(err);
       } else {
