@@ -1,1 +1,0 @@
-var artcl = require("../controllers/artcls");
